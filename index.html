@@ -2,27 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Out of Office</title>
+    <title>Published Google Sheet</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Remove margins and padding from the body */
+        /* Prevent scrolling on the body */
         body, html {
             margin: 0;
             padding: 0;
-            overflow: hidden;
             height: 100%;
+            overflow: hidden;
         }
-        /* Set iframe to occupy full viewport without scroll bars */
-        iframe {
-            border: none;
+        /* Full-screen iframe container */
+        .sheet-container {
             width: 100vw;
             height: 100vh;
+            overflow: hidden;
+        }
+        /* Embed the sheet */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* Circular button styles */
+        .circular-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #333; /* Dark grey color */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Modern shadow effect */
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        /* Hover effect */
+        .circular-button:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <!-- Replace YOUR_GOOGLE_SHEET_LINK with the actual link to the published Google Sheet -->
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQstC1isiqBBmVL1tArzJVzd71c75_RensUbUGU8sfUOZzBfOT_oO7K3f-4OAGOIEqbAA30b-Y79JLI/pubhtml?gid=1232381905&single=true" allowfullscreen></iframe>
+    <div class="sheet-container">
+        <!-- Embed the Google Sheet with the link to the published sheet -->
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQstC1isiqBBmVL1tArzJVzd71c75_RensUbUGU8sfUOZzBfOT_oO7K3f-4OAGOIEqbAA30b-Y79JLI/pubhtml?gid=1232381905&single=true" frameborder="0"></iframe>
+    </div>
+    
+    <!-- Circular button with pencil icon -->
+    <a href="https://docs.google.com/spreadsheets/d/1Ywjg5Xd_CCIJi6wa_L7V61Gm1p0cvLobopIN5PhV2wo/edit?usp=sharing" class="circular-button" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-pencil-alt"></i> <!-- Pencil icon -->
+    </a>
 </body>
 </html>
