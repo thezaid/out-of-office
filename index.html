@@ -2,49 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webview with Centered Button</title>
+    <title>Out of Office</title>
     <style>
+        /* Remove margins and padding from the body */
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             overflow: hidden;
+            height: 100%;
         }
+        /* Set iframe to occupy full viewport without scroll bars */
         iframe {
-            width: 95%;
-            height: 95%;
             border: none;
-        }
-        .button-container {
-            position: absolute;
-            bottom: 5%;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #555;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .button:hover {
-            background-color: #333;
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQstC1isiqBBmVL1tArzJVzd71c75_RensUbUGU8sfUOZzBfOT_oO7K3f-4OAGOIEqbAA30b-Y79JLI/pubhtml?gid=1232381905&amp;single=true&amp;widget=true&amp;headers=false" title="Webview"></iframe>
-    <div class="button-container">
-        <a href="https://docs.google.com/spreadsheets/d/1Ywjg5Xd_CCIJi6wa_L7V61Gm1p0cvLobopIN5PhV2wo/edit?usp=sharing" class="button" target="_blank">
-            Edit
-        </a>
-    </div>
+    <!-- Replace YOUR_GOOGLE_SHEET_LINK with the actual link to the published Google Sheet -->
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQstC1isiqBBmVL1tArzJVzd71c75_RensUbUGU8sfUOZzBfOT_oO7K3f-4OAGOIEqbAA30b-Y79JLI/pubhtml?gid=1232381905&single=true" allowfullscreen></iframe>
 </body>
 </html>
